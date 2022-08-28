@@ -1,0 +1,557 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>sector 0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/simple.css">
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <script src="plugin/math/math.js"></script>
+
+  <style>
+    .reveal .slides {
+      border: 1.5px #ddd solid;
+      border-radius: 7px;
+      text-align: left;
+      font-weight: 300;
+    }
+
+    section h2 {
+      font-size: 52px !important;
+      border-bottom: 2mm ridge rgba(66, 204, 255, 0.6);
+      padding-bottom: 5px;
+      padding-left: 15px;
+      padding-top: 5px;
+    }
+
+    section h1 {
+      font-size: 60px !important;
+      text-align: center;
+      padding-top: 300px;
+    }
+
+    section {
+      top: 0px !important;
+    }
+
+    section .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* .slides-div {
+				margin: 15px;
+			} */
+    p {
+      font-size: 32px;
+      padding-left: 15px;
+      /* padding-top: 10px; */
+    }
+
+    li {
+      padding-left: 15px;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>计算机天地开辟神话</h1>
+      </section>
+
+      <section>
+        <section>
+          <h1>课程介绍</h1>
+        </section>
+        <section>
+          <div class="slides-div">
+            <h2>这门课靠谱吗？</h2>
+            <blockquote class="relative">
+              <svg
+                class="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 dark:text-gray-700"
+                width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                  fill="currentColor" />
+              </svg>
+
+              <div class="relative z-10">
+                <p class="text-gray-800 sm:text-xl dark:text-white"><em>
+                    我们站在巨人的肩膀上。
+                </p></em>
+              </div>
+            </blockquote>
+            <!-- <img class="float-right px-10" src="http://jyywiki.cn/static/img/nju-logo.jpg"/> -->
+            <p data-markdown>
+              1. 哈佛大学 [CS50](https://cs50.harvard.edu/college/2021/fall/) —— 课程的内容
+              2. 麻省理工 [missing semester](https://missing-semester-cn.github.io/) —— 课程的“哲学”
+              3. 南京大学 [ICS](https://nju-projectn.github.io/ics-pa-gitbook/ics2022/) —— 课程的文档
+              4. 南京大学 [OS](http://jyywiki.cn/OS/2022/) —— 课程的上课形式
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="silde-div">
+            <h2>这门课的目标</h2>
+            <p data-markdown>
+              1. 让大家在大二的时候能够具备上 NJU ICS 和 NJU OS 的水平
+              2. 计算机真的很好玩
+              3. 教会大家怎么学计算机
+              4. ？？？
+            </p>
+            <img class="center" src="dist/img/newgame.jpeg" />
+          </div>
+        </section>
+        <section>
+          <div class="silde-div">
+            <h2>和算法培训的区别</h2>
+            <blockquote class="relative">
+              <svg
+                class="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 dark:text-gray-700"
+                width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                  fill="currentColor" />
+              </svg>
+  
+              <div class="relative z-10">
+                <p class="text-gray-800 sm:text-xl dark:text-white" style="padding-left: 30%;"><em>
+                  对于大部分计算机本科专业学生来说, 硬件设计能力不如电子工程专业学生, 行业软件开发和应用能力不如其他相关专业学生, 算法设计和分析基础又不如数学系学生. 那么, 计算机专业学生的特长在哪里? ——<a href="https://nju-projectn.github.io/ics-pa-gitbook/ics2021/why.html#%E7%AB%99%E5%BE%97%E9%AB%98-%E7%9C%8B%E5%BE%97%E8%BF%9C">南京大学计算机系统基础</a>
+                </p></em>
+              </div>
+            </blockquote>
+            
+            <p data-markdown>
+              一个偏工科，一个偏理科。
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="silde-div">
+            <h2>Office Hour</h2>
+            <p data-markdown>
+              由于是学生，本质上没有 Office Hour
+
+              邮箱 bubbleioa@qq.com
+
+              [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
+              
+              [别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)
+
+              助教征集：
+              1. 帮忙回答问题
+              2. 完善 notes
+            </p>
+          </div>
+        </section>
+      </section>
+
+
+      <section>
+        <section>
+          <h1>为什么要学计算机科学？</h1>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>高中数学课本的一个回答</h2>
+            <img class="center" src="dist/img/math.png" />
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>但更重要的是……</h2>
+            <p>计算机真的很酷！</p>
+            <blockquote class="relative">
+              <svg
+                class="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 dark:text-gray-700"
+                width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                  fill="currentColor" />
+              </svg>
+
+              <div class="relative z-10">
+                <p class="text-gray-800 sm:text-xl dark:text-white"><em>
+                  “The computer was born to solve problems that did not exist before.”
+
+                  - Bill Gates.
+                </p></em>
+              </div>
+            </blockquote>
+            <img class="float-right px-10 scale-75" id="mb" src=""/>
+            <p data-markdown>
+              我们的几个实验：
+              1. 画图！
+              2. 游戏修改器！
+              3. 敬请期待……
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>什么是计算机科学？</h1>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>不仅仅是：</h2>
+            <img class="float-right px-10" style="max-height: 500px;" src="dist/img/reparing.png"/>
+            <p data-markdown>
+              - 编程 Coding
+              - 算法 Algorithm
+              - ~~修电脑 Reparing~~
+
+              计算机都由那些部分组成？计算机各个部分扮演的角色是什么？
+
+              “最简单的计算机”该具备什么？
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>一句话结论：问题求解</h2>
+            <p data-markdown>
+              通过使用工具，将输入变成输出。
+            </p>
+            <img class="center" src="dist/img/calc.png"/>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>一句话结论：问题求解(cont'd)</h2>
+            <p data-markdown>
+              我们有一个输入，我们有一个期望输出。
+              
+              中间这个过程就是问题求解的过程。
+            </p>
+            <div class="mermaid">
+              graph LR 
+              Input-->ProblemSolving-->Output
+            </div>
+            <p data-markdown>
+              - 输入可以是一段图片，输出是图片右上角加了一个水印 [ffmpeg](https://ffmpeg.org/)
+              - 输入可以是一首歌，输出是人声和[背景音乐的分离](https://github.com/Anjok07/ultimatevocalremovergui)
+              - 输入可以是一种语言，输出是另一种语言[翻译](https://www.deepl.com/translator)。
+            </p>
+
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>数据表示</h1>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>数字的表示</h2>
+            <p data-markdown>
+              为什么只能有 0 和 1？试试[三进制计算机](https://en.wikipedia.org/wiki/Ternary_computer)！
+              - 点人数数手指头，一进制，表示自然数
+              - 使用 0～9，十进制
+              - 使用 0, 1，二进制
+              
+              每个二进制数字也被称为一个比特。
+
+              大多数计算机每次使用 8 位，称为一个字节，如 **0000000011** 代表数字 3。
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>文本的表示</h2>
+            <img class="float-right" src="https://www.asciitable.com/asciifull.gif"/>
+            <p data-markdown>
+              既然我们已经能表示数字了，那么直接建立一个数字到字符的映射不就可以表示文本了？
+              
+              a = 97
+
+              到这里你会发现计算机科学的第二个特点：人为约定。
+
+              [ASCII艺术](https://zh.moegirl.org.cn/ASCII%E8%89%BA%E6%9C%AF)
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>文本的表示(cont'd)</h2>
+            <p data-markdown>
+              想表示汉字甚至更多字符？加位数！
+
+              [unicode](https://home.unicode.org/) 甚至连 emoji 都包含在内了 😂
+
+              UTF-32 直接用 32 个比特表示一个字符，但是很多字符（例如数字字母）只用了一个字节，于是就有了动态调整的 UTF-8
+
+              2019: 😂 ❤️ 😍 🤣 😊 🙏 💕 😭 😘 👍
+
+              2021: 😂 ❤️ 🤣 👍 😭 🙏 😘 🥰 😍 😊
+              
+              甚至连微信都能“翻译”：
+            </p>
+            <img src="dist/img/wechat.png">
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>多媒体的表示</h2>
+            <p data-markdown>
+              1. 图片——像素点 RGB，手写图片！[Netpbm](https://en.wikipedia.org/wiki/Netpbm)
+              2. 视频——连续的图片，再加点声音
+              3. 音乐——MIDI,mp3,wav,[Sonic Pi](https://www.bilibili.com/video/BV16b4y1y7R5)
+            </p>
+            <div class="px-5">
+              <img class="inline" style="max-width: 30%;" src="dist/img/microscope_1.jpg" alt="显微镜下的屏幕"/>
+              <img class="inline" style="max-width: 30%;" src="dist/img/microscope_2.jpg" alt="显微镜下的屏幕"/>
+              <img class="inline" style="max-width: 30%;" src="dist/img/microscope_3.jpg" alt="显微镜下的屏幕"/>
+            </div>
+            <p>显微镜放大 160 倍之后的屏幕（NS, NS, Mi band 4) </p>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>进入计算机的世界！</h1>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>程序是如何表示的？</h2>
+            <img class="float-right px-10" src="dist/img/keyboard.png"/>
+            <p data-markdown>
+              无脑答：0和1
+
+              算是一个正确的答案，奖励你这个键盘，用它来构造整个计算机世界吧！
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>程序是如何表示的？(cont'd)</h2>
+            <p data-markdown>
+              实际上远比大家想的简单。
+
+              我们可以人为约定，一个10个字节的程序其中一半是数据区域，一半是逻辑区域，我们运行一个程序，就是从逻辑区域每次取一个字节，然后根据下面这个表做出相应的动作：
+
+              |  操作类型   | 数字一 |数字二|
+              |  ----  | ----  |----|
+              | xxxx | xx |xx|
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>程序是如何表示的？(cont'd)</h2>
+            <p data-markdown>
+              |  操作类型   | 数字一 |数字二|说明|
+              |  ----      | ----  |----|----|
+              | 0001       | xx |xx|数字一加上数字二存放在数字一里|
+              | 0002       | xx |xx|减法同上|
+              | 0003       | xx |xx|将数字一复制一份到数字二|
+              | 0004       | xx |xx|将数字一赋值为数字二|
+
+              这个表其实是我们的 CPU “提供”的，被称为指令集架构(ISA, Instruction Set Architecture)
+              顺便回答了之前的问题：
+
+              最小的计算机就是上面的表（CPU）加上存放程序的元件（内存）构成的。
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>套娃🪆的开始：汇编</h2>
+            <p data-markdown>
+              总不可能真的用上面那款键盘编程吧（除非不是碳基生物了）
+
+              于是引入记号便顺理成章了：
+              |  助记符   | 数字一 |数字二|说明|
+              |  ----      | ----  |----|----|
+              | ADD       | xx |xx|数字一加上数字二存放在数字一里|
+              | SUB       | xx |xx|减法同上|
+              | MOV       | xx |xx|将数字一复制一份到数字二|
+              | MOVI       | xx |xx|将数字一赋值为数字二|
+
+              事实上，你们在大二的时候真的要学一门汇编——[8086](https://yjdoc2.github.io/8086-emulator-web/compile)
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>继续套娃🪆</h2>
+            <p data-markdown>
+              汇编也有很多问题，比如说比较费程序员，换一个机器就要重新写代码。
+
+              于是我们的前辈们就想：能不能开发种语言，将这种语言写的代码通过一段程序变成汇编，然后就能用前辈的前辈们实现的汇编器，变成能被计算机识别的01序列了！
+
+              C 语言就是那个时代的一员。
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>穿越时空的 C 语言</h2>
+            <img class="float-right px-10" style="max-width: 50%;" src="dist/img/Apple_II.jpg"/>
+            <p data-markdown>
+              发明 C 语言的人肯定是最懂 C 语言的人之一，假设我们穿越回1972年
+
+              Dennis Ritchie 正好在开设补习班教大家 C 语言，除了语言不同之外，在那里学 C 语言和我们现在学 C 语言有什么区别呢？
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="slide-div">
+            <h2>CLI(command-line interface)</h2>
+            <img class="center px-10" style="max-width: 90%;" src="dist/img/tar.png"/>
+            <p data-markdown>
+              1. 使用 CLI 来操作计算机本身就是编程。
+              2. 能够很方便与现有工具结合使用。
+              3. 如果你知道命令， CLI 可以比任何其他类型的界面快得多，效率也高。它还可以轻松处理重复性任务。
+              4. 世界上很多计算机是没有图形界面的，而大多数人工作后都要接触它们。
+              5. CLI 能让你学到更多。
+            </p>
+          </div>
+        </section>
+        
+      </section>
+      <section>
+        <section>
+          <h1>Scratch</h1>
+          <blockquote class="relative">
+            <svg
+              class="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 dark:text-gray-700"
+              width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.69067 8.45999C7.16197 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9173 8.45999C14.3886 8.93999 14.6242 9.55333 14.6242 10.3Z"
+                fill="currentColor" />
+            </svg>
+
+            <div class="relative z-10">
+              <p class="text-gray-800 sm:text-xl dark:text-white" style="padding-left: 30%;"><em>
+                “Cats rule the world.” – Jim Davis.
+              </p></em>
+            </div>
+          </blockquote>
+        </section>
+        <section>
+          <h2>Scratch 搭积木！</h2>
+          <embed class="px-10 py-10 float-right" src="dist/img/scratch2.svg" type="image/svg+xml" />
+          <embed class="px-10 py-10 float-right" src="dist/img/scratch1.svg" type="image/svg+xml" />
+          <p data-markdown>
+            当我们点击小绿旗的时候，标志着 Scratch 开始运行。
+
+            接下来小猫咪会说 "Hello!" 持续两秒钟。
+          </p>
+          <div class="px-10 py-10 mermaid">
+            graph LR 
+            Hello,2-->说-->说Hello!持续两秒钟
+          </div>
+        </section>
+        <section>
+          <h2>让小猫数数</h2>
+          <embed class="px-10 py-10 float-right" src="dist/img/scratch3.svg" type="image/svg+xml" />
+          <p data-markdown>
+            如果我们要让小猫每次都记得自己上次说了啥，那就得有个东西能存放它上次的数字——**变量**！
+
+            当然了，我们想让小猫自己数数，而不是每次我们点绿旗它才会数，就要使用**循环**。
+          </p>
+        </section>
+        <section>
+          <h2>让小猫喵喵叫</h2>
+          <embed class="px-10 py-10 float-right" src="dist/img/scratch4.svg" type="image/svg+xml" />
+          <p data-markdown>
+            猫什么时候会叫是困扰科学界的一大难题。
+
+            最近发现，当猫猫数数到偶数的时候，它们就会叫。
+
+            你现在的任务就是模拟猫叫的时机，为此你需要**条件判断**。
+          </p>
+        </section>
+        <section>
+          <h2>自定义积木</h2>
+          <embed class="px-10 py-10 float-right" src="dist/img/scratch5.svg" type="image/svg+xml" />
+          <p data-markdown>
+            我们可以使用抽象化的概念，或将几个积木组合成一个，这样我们就可以更容易地使用和思考它们。
+          </p>
+        </section>
+      </section>
+      <section>
+        <section><h1>总结</h1></section>
+        <section>
+          <h2>这节课学到了什么</h2>
+          <p data-markdown>
+            - 课程目标
+            - 为什么要学计算机科学
+            - 什么是计算机科学
+            - 计算机中数据的表示
+            - 程序的运行
+            - Scratch
+          </p>
+          <p data-markdown>
+            Take-away message:
+            - 分层
+            - 约定
+          </p>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="dist/mermaid.min.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      width: 1024,
+      height: 720,
+      margin: 0.04,
+
+      // Bounds for smallest/largest possible scale to apply to content
+      minScale: 0.2,
+      maxScale: 2.0,
+      slideNumber: 'c/t',
+      // Learn about plugins: https://revealjs.com/plugins/
+      mathjax3: {
+        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        },
+      },
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3]
+    });
+    mermaid.initialize({ startOnLoad: true });
+    // 使用 api 渲染图片，兼容不支持 WASM 的浏览器
+    function randomInRange(min, max) {
+      return Math.random()<0.5? ((1-Math.random()) * (max-min) + min) : (Math.random() * (max - min) + min)
+    }
+    const mb = document.getElementById('mb')
+   
+    mb.setAttribute('src','https://service-avb1tv8k-1303953543.hk.apigw.tencentcs.com/release/image?scale='+randomInRange(9e-9,1.5e-7)+'&id=2')
+  
+  </script>
+</body>
+
+</html>
