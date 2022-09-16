@@ -1,0 +1,1 @@
+import"./DrawingControls.vue_vue_type_script_setup_true_lang.df3f4b8e.js";import{_ as t}from"./DrawingControls.vue_vue_type_script_setup_true_lang.df3f4b8e.js";import"./index.7949afbd.js";export{t as default};
